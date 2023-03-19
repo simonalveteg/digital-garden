@@ -1,0 +1,5 @@
+---
+{"dg-publish":true,"permalink":"/portar/","tags":["kommunikationssystem"]}
+---
+
+[[Internet Protocol\|Internet protokollen]] [[UDP\|UDP]] och [[TCP\|TCP]] använder portar numrerade 0-65535 som en adress som i praktiken visar vilken process på en viss dator paketen hänför sig till. Portarna hanteras av IANA (Internet Assigned Number Authority), och delas upp i tre olika sorter. *Standardportarna* har ett nummer mellan 0 och 1023, och används av program för att bestämma vilken annan port de ska kommunicera på. *Registrerade portar* är mellan 1024 och 49151. De kallas registrerae eftersom att man kan registrerade hos IANA för att undvika att flera applikationer använder samma port. *Dynamiska portar* är mellan 49152 och 65535 och är varken kontrollerade eller registrerade och kan därför användas fritt av alla applikationer.
