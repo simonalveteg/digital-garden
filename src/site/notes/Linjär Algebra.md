@@ -1,24 +1,19 @@
-```dataviewjs
-let course = "linjäralgebra";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/linjaer-algebra/","tags":["linjäralgebra"]}
+---
+
+
+I linjär algebra är det enda som händer med ens variabler att de skalas med någon faktor ([[Skalär\|skalär]]) och adderas till varandra. Alltså inga fancy [[Trigonometriska Funktioner\|trigonometriska]] eller [[Exponentialfunktioner\|exponentiella funktioner]] osv. 
+
+# Centrala Begrepp
+[[Vektorer\|Vektorer]]
+[[Matris\|Matris]]
+[[Linjär Avbildning\|Linjär Avbildning]]
+[[Rang\|Rang]]
+[[Invers Matris\|Invers Matris]]
+[[Determinant\|Determinant]]
+[[Nollrum\|Nollrum]]
+[[Egenvektorer\|Egenvektorer]]
+[[Egenvärden\|Egenvärden]]
+
+Se kurs → [[FMAB20 Linjär Algebra\|FMAB20 Linjär Algebra]]
