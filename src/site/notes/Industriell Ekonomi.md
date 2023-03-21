@@ -1,24 +1,37 @@
-```dataviewjs
-let course = "industriellekonomi";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/industriell-ekonomi/","tags":["industriellekonomi"]}
+---
+
+## Osäkerheter
+Internränta
+[[DuPont Modellen\|Dupont modellen]]
+[[Kapitalvärdesmetoden\|Kapitalvärdesmetoden]] + [[Paybackmetoden\|Paybackmetoden]]
+[[Annuitetsmetoden\|Annuitetsmetoden]]
+[[Investeringsbedömning\|Investeringsbedömning]] - val mellan alternativ 
+
+## Koncept
+[[Ekonomi (indek)\|Ekonomi (indek)]]
+[[Företag\|Företag]]
+[[Produkt (indek)\|Produkt (indek)]]
+[[Marknad\|Marknad]]
+[[Kalkylering\|Kalkylering]]
+[[Bokföring\|Bokföring]]
+[[Värderingsprinciper\|Värderingsprinciper]]
+[[Finansiell Analys\|Finansiell Analys]]
+
+## Viktiga begrepp
+[[Utgift\|Utgift]]
+[[Inkomst\|Inkomst]]
+[[Kostnad (indek)\|Kostnad (indek)]]
+[[Intäkt\|Intäkt]]
+[[Utbetalning\|Utbetalning]]
+[[Inbetalning\|Inbetalning]]
+[[Likviditet\|Likviditet]]
+
+## Övrigt
+[[Ekonomiska begrepp och notationer\|Ekonomiska begrepp och notationer]]
+[[Övningsuppgifter i industriell ekonomi\|Övningsuppgifter i industriell ekonomi]]
+[[Benjamins minnesregel för bokföring\|Benjamins minnesregel för bokföring]]
+
+
+Se kurs → [[MIOA12 Industriell Ekonomi\|MIOA12 Industriell Ekonomi]]
