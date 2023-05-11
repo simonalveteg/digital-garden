@@ -1,24 +1,44 @@
-```dataviewjs
-let course = "digitalsignalbehandling";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/eitf-75-digital-signalbehandling/","tags":["moc, course, digitalsignalbehandling"]}
+---
+
+
+
+
+Kursen i digital signalbehandling ger grundläggande kunskaper i digital signalbehandling och kunskaper om frekvensegenskaper och frekvensinnehåll. Allt från komprimering och bildbehandling till kodning av musik, tal eller video ingår i begreppet digital signalbehandling.
+
+Kursen behandlar tidsdiskreta signaler och [[Tidsdiskreta System\|tidsdiskreta system]] och innehåller bland annat olika transformer som [[Fouriertransformationer\|Fouriertransform]], Diskret Fourier Transform och [[Z-transform\|Z-transform]]. Även systemfunktion och [[Frekvensfunktion\|frekvensfunktion]] introduceras tillsammans med några olika sorters filter. Digital signalbehandling av analoga signaler via A/D och D/A omvandling, olika strukturer för implementering av digitala filter är också att vänta.
+
+[Kursbok](file://C:\Users\simon\Documents\Obsidian\migraine\books\digsig_bok.pdf)
+![Pasted image 20220831070440.png](/img/user/images/Pasted%20image%2020220831070440.png)
+
+# Kursinfo
+
+2 föreläsningar i veckan, 2 övningar i veckan.
+
+## Laborationer
+första jobbig andra värre 🤡
+Tips: ta instruktionerna till en övning och ställ frågor, gör labben sen. Teorifrågor, och sen implementation. Laborationerna är mer som Q&A, förbered innan.
+
+### Lab 1 
+Audio and speech processing
+
+### Lab 2
+Signal processing for communication systems
+
+# Gjorda extentor
+* 2022-08-25 x2
+	* 1e - [[Overlap-add Method\|overlap-add method]] adds delay since we need to wait for the next block before calculating
+	* 6 - bevis med definitionen av DFT
+* 2022-04-19
+	* 2 - Linear phase $\to$ poles in 1/r of the existing poles ($re^{\pm j\omega}$)
+	* 6 - bevis med DFT
+* 2021-10-28
+* 2016
+	* 1 - fucked propeller
+	* 2 - cirkulär faltning med olika modulo
+	* 3 - Identifiera polezero med amplitud, fas m.m
+	* 4 - fick fel med partialbråksuppdelning
+	* 5 - zero input, zero state, transienta, stationära, och totala lösningen av en insignal till ett system??
+
+<h1><span><p>Föreläsningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">11</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>11</td></tr></tbody></table></div><h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">90</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>30/03-23 13:43</td><td>2</td></tr><tr><td><span></span></td><td>21/03-23 00:45</td><td>1</td></tr><tr><td><span></span></td><td>21/03-23 00:45</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>17</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>13</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>18</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>11</td></tr></tbody></table></div>
