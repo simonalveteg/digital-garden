@@ -17,7 +17,7 @@ There are there commonly used levels of precision for floating-point numbers ($\
 ![Pasted image 20230320162642.png](/img/user/images/Pasted%20image%2020230320162642.png)
 Each $b$ is 0 or 1. $e$ is an $M$-bit binary number representing the exponent. Normalization means that the leading (leftmost) bit must be 1.
 
-# Representation of infinite (binary numbers)
+# Representation of infinite ([[Binary Numbers\|binary numbers]])
 How do we fit an infinite recurring sequence in a finite representation? There are a few alternatives
 
 ## Chopping
