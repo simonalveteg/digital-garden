@@ -1,10 +1,7 @@
-```dataviewjs
-let pages = dv.pages("#course AND #moc");
-for (let group of pages.groupBy(b => b.study_year)) { 
-	dv.header(1, "Year "+group.key);
-	dv.table(
-		["Course","LP","HP"],
-		group.rows.sort(b => b.study_period).map(b => [b.file.link,b.study_period,b.hp])
-	);
-}
-```
+---
+{"dg-publish":true,"permalink":"/laesar/","tags":["moc"]}
+---
+
+En lista på alla kurser jag läst på LTH och antecknat till, typ
+
+<h1><span><p>Year 1</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">2</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td><span></span></td><td><span></span></td></tr><tr><td><span></span></td><td>3</td><td>6</td></tr></tbody></table></div><h1><span><p>Year 2</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">7</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>1.2</td><td>9</td></tr><tr><td><span></span></td><td>2</td><td>6</td></tr><tr><td><span></span></td><td>2.4</td><td>8</td></tr><tr><td><span></span></td><td>3</td><td>7</td></tr><tr><td><span></span></td><td>3</td><td>5</td></tr><tr><td><span></span></td><td>4</td><td>7</td></tr><tr><td><span></span></td><td>4</td><td>4.5</td></tr></tbody></table></div><h1><span><p>Year 3</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">10</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>1</td><td>7.5</td></tr><tr><td><span></span></td><td>1</td><td>6</td></tr><tr><td><span></span></td><td>1.2</td><td>9</td></tr><tr><td><span></span></td><td>2</td><td>7.5</td></tr><tr><td><span></span></td><td>3</td><td>5</td></tr><tr><td><span></span></td><td>3</td><td>5</td></tr><tr><td><span></span></td><td>3</td><td>6</td></tr><tr><td><span></span></td><td>3.4</td><td>5</td></tr><tr><td><span></span></td><td>4</td><td>4</td></tr><tr><td><span></span></td><td>4</td><td>6</td></tr></tbody></table></div>
