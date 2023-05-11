@@ -1,24 +1,8 @@
-```dataviewjs
-let course = "mätteknik";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/essf-10-maetteknik/","tags":["moc, course, mätteknik"]}
+---
+
+
+[[Mätteknik\|Mätteknik]]
+
+<h1><span><p>Laborationer</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">2</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr></tbody></table></div><h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">41</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>28/03-23 16:30</td><td>4</td></tr><tr><td><span></span></td><td>21/03-23 00:35</td><td>4</td></tr><tr><td><span></span></td><td>21/03-23 00:34</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>16</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>21</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>10</td></tr><tr><td><span></span></td><td>29/04-22 13:17</td><td>2</td></tr></tbody></table></div>
