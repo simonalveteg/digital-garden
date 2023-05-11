@@ -1,24 +1,101 @@
-```dataviewjs
-let course = "kommunikationssystem";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/etsf-15-kommunikationssystem-och-naetverk/","tags":["moc, course, kommunikationssystem"]}
+---
+
+
+![Pasted image 20230116090253.png](/img/user/images/Pasted%20image%2020230116090253.png)
+
+# Upplägg
+- [<] [[Kommunikationssystem F1\|Kommunikationssystem F1]]
+	- [b] KA: 1, 6.1, 6.6, 12.5
+- [<] [[Kommunikationssystem F2\|Kommunikationssystem F2]]
+	- [b] KA: 2.1-3, 3.1-5
+		- [?] Section 2: 1-11 (ej 6)
+		- [?] Section 3: 1-11
+	- [i] [Övning 1](https://canvas.education.lu.se/courses/22591/pages/exercise-session-l2-physical-layer) 
+		- [x] 1
+		- [x] 2
+		- [x] 3
+		- [x] 4
+		- [x] 5 - $E=Pt=PT=P/R$
+		- [x] 6
+		- [?] 7 - "modulated up to" ??
+		- [?] 8 - ??
+		- [x] 9
+		- [x] 2022.4
+		- [?] 2021.1
+		- [x] 2021.12
+		- [x] 2020.2 - $\text{ har inte gjort b}$
+		- [?] 2020.7
+		- [?] 2020.8
+- [<] [[Kommunikationssystem F3\|Kommunikationssystem F3]]
+	- [b] KA: 4.1-5
+		- [?] Section 4: 1-17
+		- [?] Section 16: 1-6
+	- [i] [Övning 2](https://canvas.education.lu.se/courses/22591/pages/exercise-session-l3-data-link-layer)
+		- [?] 1
+		- [?] 2
+		- [?] 3
+		- [?] 4
+		- [?] 2022.3
+		- [?] 2021.2
+		- [?] 2021.7
+		- [?] 2020.3
+- [<] [[Kommunikationssystem F4\|Kommunikationssystem F4]]
+	- [b] KA: 5.1-6 
+		- [?] Section 5: 1-11
+	- [i] [Övning 3](https://canvas.education.lu.se/courses/22591/pages/exercise-session-l4-medium-access-control)
+		- [?] 1
+		- [?] 2
+		- [?] 3
+		- [?] 4
+		- [?] 5
+		- [?] 6
+		- [?] 7
+		- [?] 8
+		- [?] 9
+		- [?] 2022.5
+		- [?] 2022.6
+		- [?] 2021.3
+		- [?] 2020.9
+- [x] Lab 1, 9-10/2
+	- [x] Förberedelse rapport 27/1
+- [<] [[Kommunikationssystem F5\|Kommunikationssystem F5]]
+	- [b] KA: 6.2-3, 7.1-3, 8.1-5
+- [<] [[Kommunikationssystem F6\|Kommunikationssystem F6]]
+	- [b] KA: 7.4-6, 7.8, 12.10
+		- [?] Section 6: 1-5
+		- [?] Section 7: 1-10
+		- [?] Section 8: 1-4 (facit fel för 4)
+	- [i] [Övning 4](https://canvas.education.lu.se/courses/22591/pages/exercise-session-l5-network-layer)
+		- [?] 1
+		- [?] 2
+		- [?] 2022.1
+		- [?] 2022.2
+		- [?] 2022.8
+		- [?] 2022.8
+		- [?] 2021.4
+		- [?] 2021.5
+		- [?] 2021.9
+		- [?] 2021.10
+		- [?] 2020.4
+		- [?] 2020.6
+- [<] [[Kommunikationssystem F7\|Kommunikationssystem F7]]
+	- [b] KA: 10.1-3
+		- [?] Section 10: 1-9
+	- [i]  [Övning 5](https://canvas.education.lu.se/courses/22591/pages/exercise-session-l7-transport-layer)
+		- [?] 1
+		- [?] 2
+		- [?] 3
+		- [?] 2022.6
+		- [?] 2021.6
+		- [?] 2021.8
+		- [?] 2021.1
+		- [?] 2020.5
+- [x] Lab 2, 2-3/3
+	- [x] Förberedelse rapport 17/2
+- [x] Lab 3, hemifrån 
+
+[[Komsys Tentaplugg\|Komsys Tentaplugg]]
+
+<h1><span><p>Föreläsningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">7</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr></tbody></table></div><h1><span><p>Laborationer</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">2</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr></tbody></table></div><h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">96</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>21/03-23 00:56</td><td>9</td></tr><tr><td><span></span></td><td>21/03-23 00:55</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>17</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:49</td><td>6</td></tr></tbody></table></div>
