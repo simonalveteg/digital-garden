@@ -1,24 +1,23 @@
-```dataviewjs
-let course = "reglerteknik";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/frtf-05-reglerteknik/","tags":["moc, course, reglerteknik"]}
+---
+
+
+Kursen inom reglerteknik behandlar [[Linjära System\|linjära]] [[Tidskontinuerliga System\|tidskontinuerliga system]] och ger en översikt av reglerteknikens problemställningar och arbetsmetoder. Bland innehållet finns beskrivning av [[Dynamiska System\|dynamiska system]] med hjälp av tidsinvarianta ordinära [[Differentialekvationer\|differentialekvationer]], [[Överföringsfunktion\|överföringsfunktion]], frekvenskurvor och Bode- och nyquistdiagram. [[Controllability\|Styrbarhet]] och observerbarhet, analys av [[feedback\|återkopplade]] [[System (matematisk definition)\|System (matematisk definition)]] och olika metoder för stabilitetsundersökning och mycket mer. [[Stabila och Instabila System\|Stabilitet]] och robusthet är begrepp som behandlas.
+
+3 obligatoriska laborationer. Lab 2 och 3 kräver förberedelser.
+
+tips: Brian Douglas youtube, control theory videos.
+
+# Gjorda extentor
+* 2022-08-17
+* 2021-10-25
+* 2022-10-26
+* 2019-10-28
+* 2021-08-18
+* 2022-03-17
+* 2022-01-13
+	* [[Sensitivity Function\|Sensitivity function]]
+	* [[Feed Forward Design\|Framkoppling]]
+
+<h1><span><p>Föreläsningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">13</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr></tbody></table></div><h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">78</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>21/03-23 16:22</td><td>8</td></tr><tr><td><span></span></td><td>21/03-23 00:47</td><td>11</td></tr><tr><td><span></span></td><td>21/03-23 00:47</td><td>2</td></tr><tr><td><span></span></td><td>21/03-23 00:11</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>34</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>13</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>23</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>13</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>18</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>23</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>11</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>14</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>10</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:47</td><td>7</td></tr></tbody></table></div>
