@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/oeverbestaemda-system/","tags":["linjäralgebra","systemochtransformer"]}
+{"dg-publish":true,"permalink":"/oeverbestaemda-system/","tags":["linjäralgebra, systemochtransformer"]}
 ---
 
 Överbestämda  [[Ekvationssystem\|ekvationssystem]] har **fler** ekvationer än obekanta.
