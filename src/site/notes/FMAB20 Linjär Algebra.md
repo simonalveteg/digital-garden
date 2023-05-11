@@ -1,24 +1,13 @@
-```dataviewjs
-let course = "linjäralgebra";
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #"+course);
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#"+course)
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/fmab-20-linjaer-algebra/","tags":["moc, course, linjäralgebra"]}
+---
+
+
+[[Linjär Algebra\|Linjär Algebra]]
+
+# Nyttiga länkar
+[3Blue1Brown: Linear Alg - YouTube](https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B)
+[Jonas Månsson: Linjär algebra - YouTube](https://www.youtube.com/playlist?list=PL2w8yt28pgXrYD4BeDz12t0nWZVUY62-E)
+
+
+<h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">44</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>24/04-23 15:45</td><td>4</td></tr><tr><td><span></span></td><td>30/03-23 13:28</td><td>16</td></tr><tr><td><span></span></td><td>22/03-23 16:55</td><td>3</td></tr><tr><td><span></span></td><td>22/03-23 15:46</td><td>2</td></tr><tr><td><span></span></td><td>22/03-23 15:45</td><td>2</td></tr><tr><td><span></span></td><td>21/03-23 16:21</td><td>6</td></tr><tr><td><span></span></td><td>21/03-23 00:32</td><td>13</td></tr><tr><td><span></span></td><td>21/03-23 00:32</td><td>1</td></tr><tr><td><span></span></td><td>21/03-23 00:11</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>12</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>1</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>3</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>9</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>13</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>7</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>8</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>4</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>2</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>19</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>22</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>15</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>5</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>6</td></tr><tr><td><span></span></td><td>19/03-23 17:48</td><td>0</td></tr></tbody></table></div>
