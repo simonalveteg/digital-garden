@@ -14,7 +14,7 @@ $$\begin{flalign}&\begin{pmatrix}\dot{x} \\ \dot{\tilde{x}}\end{pmatrix}=\begin{
 y=\begin{pmatrix}C & 0\end{pmatrix}\begin{pmatrix}x \\ \tilde{x}\end{pmatrix}=C_{e}\begin{pmatrix}x \\ \tilde{x}\end{pmatrix}
 \end{flalign}
 $$
-The $_{e}$ stands for expanded. Since we chose $x_{e}=\begin{pmatrix}x \\ \tilde{x}\end{pmatrix}$ earlier our matrices $A_{e}, B_{e}, C_{e}$ contain a number of zeros, which will make our lives easier. Since $A_{e}$ is a triangular matrix, it's [[Karaktäristiska Polynomet\|characteristic polynomial]] is given by 
+The $_{e}$ stands for expanded. Since we chose $x_{e}=\begin{pmatrix}x \\ \tilde{x}\end{pmatrix}$ earlier our matrices $A_{e}, B_{e}, C_{e}$ contain a number of zeros, which will make our lives easier. Since $A_{e}$ is a [[Triangular Matrix\|triangular matrix]], it's [[Karaktäristiska Polynomet\|characteristic polynomial]] is given by 
 $$det(sI-A_{e})=det(sI-(A-BK))\cdot det(sI-(A-LC))$$
 
 
