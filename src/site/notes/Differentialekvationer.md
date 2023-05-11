@@ -3,6 +3,9 @@
 ---
 
 
+Differential equations relates a function or set of function to its derivatives.
+
+[[Ordinary Differential Equations\|Ordinary Differential Equations]]
 [[Homogena Differentialekvationer\|Homogena Differentialekvationer]]
 [[Inhomogena Differentialekvationer\|Inhomogena Differentialekvationer]]
 
