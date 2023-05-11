@@ -13,4 +13,6 @@ In the IEEE machine arithmetic model, the relative roundin gerror of $fl(x)$ is 
 $$
 \frac{\left| fl(x)-x \right|}{\left| x \right| }\leq \frac{1}{2}\epsilon_{mach}
 $$
-
+[[Cancellation Error\|Cancellation Error]]
+[[Interpolation Error\|Interpolation Error]]
+[[Backward Error and Forward error\|Backward Error and Forward error]]
