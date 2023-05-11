@@ -1,23 +1,12 @@
-```dataviewjs
-let tags = new Map();
-tags.set("Föreläsning","Föreläsningar");
-tags.set("Laboration","Laborationer");
-tags.set("Övning","Övningar");
-tags.set("Seminarium","Seminarium");
-tags.set("Inlämning","Inlämningar");
-for (let [key,value] of tags) {
-	let pages = dv.pages("#"+key+" and #hållbarutveckling");
-	if (pages.length > 0) {
-		dv.header(1, value);
-		dv.table(["File","Modified","Links"], pages
-			.sort(b => -b.file.mtime)
-			.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-		);
-	}
-}
-dv.header(1, "Alla anteckningar");
-dv.table(["File","Modified","Links"], dv.pages("#hållbarutveckling")
-	.sort(b => -b.file.mtime)
-	.map(b => [b.file.link, b.file.mtime, b.file.outlinks.length])
-);
-```
+---
+{"dg-publish":true,"permalink":"/fmif-35-hallbar-utveckling/","tags":["moc, course, hållbarutveckling"]}
+---
+
+
+[[Hållbar Utveckling\|Hållbar Utveckling]]
+
+Kursbok:
+- Hållbar utvekling - en introduktion för ingenjörer och andra problemlösare
+Finns även utdrag ur tre artiklar och två böcker på canvas
+
+<h1><span><p>Föreläsningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">8</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>02/05-23 08:16</td><td>1</td></tr><tr><td><span></span></td><td>24/04-23 14:48</td><td>9</td></tr><tr><td><span></span></td><td>24/04-23 08:58</td><td>1</td></tr><tr><td><span></span></td><td>03/04-23 14:23</td><td>1</td></tr><tr><td><span></span></td><td>27/03-23 13:16</td><td>1</td></tr><tr><td><span></span></td><td>27/03-23 10:56</td><td>3</td></tr><tr><td><span></span></td><td>24/03-23 13:19</td><td>1</td></tr><tr><td><span></span></td><td>20/03-23 09:55</td><td>1</td></tr></tbody></table></div><h1><span><p>Seminarium</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">1</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>24/03-23 11:26</td><td>0</td></tr></tbody></table></div><h1><span><p>Alla anteckningar</p></span></h1><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span></span><span class="dataview small-text">48</span></th><th class="table-view-th"><span></span></th><th class="table-view-th"><span></span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span></span></td><td>05/05-23 09:49</td><td>0</td></tr><tr><td><span></span></td><td>02/05-23 08:30</td><td>0</td></tr><tr><td><span></span></td><td>02/05-23 08:16</td><td>1</td></tr><tr><td><span></span></td><td>24/04-23 14:48</td><td>9</td></tr><tr><td><span></span></td><td>24/04-23 08:58</td><td>1</td></tr><tr><td><span></span></td><td>03/04-23 14:23</td><td>1</td></tr><tr><td><span></span></td><td>29/03-23 09:48</td><td>0</td></tr><tr><td><span></span></td><td>27/03-23 14:27</td><td>4</td></tr><tr><td><span></span></td><td>27/03-23 14:18</td><td>7</td></tr><tr><td><span></span></td><td>27/03-23 14:17</td><td>1</td></tr><tr><td><span></span></td><td>27/03-23 14:17</td><td>2</td></tr><tr><td><span></span></td><td>27/03-23 14:17</td><td>9</td></tr><tr><td><span></span></td><td>27/03-23 14:16</td><td>4</td></tr><tr><td><span></span></td><td>27/03-23 14:16</td><td>2</td></tr><tr><td><span></span></td><td>27/03-23 14:07</td><td>3</td></tr><tr><td><span></span></td><td>27/03-23 14:05</td><td>3</td></tr><tr><td><span></span></td><td>27/03-23 14:05</td><td>3</td></tr><tr><td><span></span></td><td>27/03-23 13:50</td><td>3</td></tr><tr><td><span></span></td><td>27/03-23 13:42</td><td>5</td></tr><tr><td><span></span></td><td>27/03-23 13:16</td><td>1</td></tr><tr><td><span></span></td><td>27/03-23 10:59</td><td>1</td></tr><tr><td><span></span></td><td>27/03-23 10:56</td><td>3</td></tr><tr><td><span></span></td><td>27/03-23 10:44</td><td>15</td></tr><tr><td><span></span></td><td>24/03-23 14:56</td><td>0</td></tr><tr><td><span></span></td><td>24/03-23 14:53</td><td>2</td></tr><tr><td><span></span></td><td>24/03-23 14:35</td><td>4</td></tr><tr><td><span></span></td><td>24/03-23 14:34</td><td>1</td></tr><tr><td><span></span></td><td>24/03-23 14:33</td><td>0</td></tr><tr><td><span></span></td><td>24/03-23 14:21</td><td>2</td></tr><tr><td><span></span></td><td>24/03-23 14:19</td><td>2</td></tr><tr><td><span></span></td><td>24/03-23 14:19</td><td>3</td></tr><tr><td><span></span></td><td>24/03-23 14:19</td><td>8</td></tr><tr><td><span></span></td><td>24/03-23 14:05</td><td>1</td></tr><tr><td><span></span></td><td>24/03-23 13:58</td><td>1</td></tr><tr><td><span></span></td><td>24/03-23 13:31</td><td>2</td></tr><tr><td><span></span></td><td>24/03-23 13:31</td><td>2</td></tr><tr><td><span></span></td><td>24/03-23 13:27</td><td>0</td></tr><tr><td><span></span></td><td>24/03-23 13:19</td><td>1</td></tr><tr><td><span></span></td><td>24/03-23 11:26</td><td>0</td></tr><tr><td><span></span></td><td>21/03-23 00:57</td><td>1</td></tr><tr><td><span></span></td><td>20/03-23 09:55</td><td>9</td></tr><tr><td><span></span></td><td>20/03-23 09:55</td><td>1</td></tr><tr><td><span></span></td><td>20/03-23 09:32</td><td>0</td></tr><tr><td><span></span></td><td>20/03-23 09:30</td><td>0</td></tr><tr><td><span></span></td><td>20/03-23 09:26</td><td>0</td></tr><tr><td><span></span></td><td>20/03-23 09:24</td><td>0</td></tr><tr><td><span></span></td><td>20/03-23 09:19</td><td>2</td></tr><tr><td><span></span></td><td>20/03-23 09:19</td><td>1</td></tr></tbody></table></div>
