@@ -22,3 +22,5 @@ detta är mina anteckningar som jag har tagit sen typ år 2 av elektroteknik. Ja
 - [[FRTF05 Reglerteknik\|FRTF05 Reglerteknik]]
 - [[Fysik\|Fysik]]
 - [[MIOA12 Industriell Ekonomi\|MIOA12 Industriell Ekonomi]]
+
+{ .block-language-dataview}
