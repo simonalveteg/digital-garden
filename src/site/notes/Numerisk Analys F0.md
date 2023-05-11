@@ -9,3 +9,4 @@
 [[Floating-point representation\|Floating-point representation]]
 [[Machine Epsilon\|Machine Epsilon]]
 [[Error\|Error]]
+[[Cost of computation\|Cost of computation]]
