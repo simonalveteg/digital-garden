@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/invers-matris/","tags":["systemochtransformer","linjäralgebra"]}
+{"dg-publish":true,"permalink":"/invers-matris/","tags":["systemochtransformer, linjäralgebra"]}
 ---
 
 För den [[Kvadratisk Matris\|kvadratiska matrisen]] A är den inversa [[Matris\|matrisen]] $A^{-1}$ den [[Matris\|matris]] som, när multiplicerad med A via [[Matrismultiplikation\|Matrismultiplikation]] bildar [[Enhetsmatris\|Enhetsmatrisen]]
